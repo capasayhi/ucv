@@ -3,8 +3,8 @@ operator = input('¿Qué operación quieres realizar? (+,-,*,/): ')
 
 if operator == '+' or operator == '-' or operator == '*':
 
-    first_operand = int(input('Ingresa el primer valor: '))
-    second_operand = int(input('Ingresa el segundo valor: '))
+    first_operand = float(input('Ingresa el primer valor: '))
+    second_operand = float(input('Ingresa el segundo valor: '))
 
     if operator == '+':
         print('El resultado es: ', first_operand + second_operand)
@@ -15,8 +15,8 @@ if operator == '+' or operator == '-' or operator == '*':
 
 if operator == '/':
 
-    divider = int(input('Ingresa el numerador: '))
-    dividend = int(input('ingresa el denominador: '))
+    divider = float(input('Ingresa el numerador: '))
+    dividend = float(input('ingresa el denominador: '))
 
     try:
         print('El resultado es: ', divider/dividend)
