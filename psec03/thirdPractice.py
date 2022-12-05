@@ -76,7 +76,6 @@ if operator == '/':
 
             if divisionErrors == 1:
                 print(alerts[5])
-
             if divisionErrors == 2:
                 print(alerts[6])
 
