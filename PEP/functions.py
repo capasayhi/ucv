@@ -7,7 +7,7 @@ def integerValidation(num):
     return variable
 
 
-def fourDigitsValidation(NUM, alertMessages=['1 attempt', '2 attempt', '3 attempt', '4 attempt'], inputMessages=["input 1", "input 2", "input 3", "input 4"]):
+def fourDigitsValidation(NUM, alertMessages=['1 attempt', '2 attempt', '3 attempt', '4 attempt'], inputMessages=["input 1", "input 2", "input 3"]):
     valid_NUM = False
     tries = 4
     while tries >= 0 and (not valid_NUM):

@@ -18,41 +18,43 @@ from functions import integerValidation, fourDigitsValidation
 
 
 alerts = [
-    'Ops! , you\'re missing one or more digits, try again',
-    'Remaining attempts {}... Take advantage of them well',
-    'One last chance',
-    'I give up, self-destruction in 3,2,1... BOOM!'
+    '\nOps! , you\'re missing one or more digits, try again',
+    '\nRemaining attempts {}... Take advantage of them well',
+    '\nOne last chance',
+    '\nI give up, self-destruction in 3,2,1... BOOM!'
 ]
 inputs = [
     'Enter an integer of at least 4 digits: ',
     'At least four digits must been enter: ',
-    'Come on, it\'s not complicated, just enter 4 or more numbers: ',
+    'Come on, it\'s not complicated, just enter 4 or more integers: ',
 
 ]
 
 userInput = integerValidation(input(inputs[0]))
-# print("NUM", NUM)
-amountOfRandomValues = integerValidation(
-    input("How many random values do you want to calculate?"))
-randomNumberList = []
 
 validUserInput = fourDigitsValidation(userInput, alerts, inputs)
-# print("valid_number", valid_number)
+amountOfRandomValues = integerValidation(
+    input("\nHow many random values do you want to calculate?: "))
+randomNumberList = []
 
 
 def generateRandomValue(num):
+
+    global squareNum
     squareNum = num**2
-    print(squareNum)
     randomNumber = squareNum/10**(len(str(squareNum)))
-    print("random_number", randomNumber)
     return randomNumber
 
 
 if validUserInput:
     num = userInput
     for n in range(amountOfRandomValues):
-        randomNum = generateRandomValue(num)
         randomNumberList.append(generateRandomValue(num))
-        num = randomNum[len(str(randomNum))/2 - 2: len(str(randomNum))/2 + 4]
 
-print(randomNumberList)
+        # To update the num variable used in the cycle
+        start = int(len(str(squareNum)) / 2 - 2)
+        end = start + 4
+        num = int(str(squareNum)[start: end])
+
+print("\n\nA list with the generated random values is shown below\n", randomNumberList)
+print()
