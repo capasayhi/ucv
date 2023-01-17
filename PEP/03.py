@@ -19,7 +19,7 @@ cols = integerValidation(input("Enter the number of columns: "))
 
 matriz = createBaseMatrix(rows)
 
-# To fill the matrix whit the correct values
+# Fill the rows with the number of values as indicated by the variable column
 counter = 1
 for index in range(len(matriz)):
     for item in range(cols):
