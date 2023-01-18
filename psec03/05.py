@@ -17,7 +17,7 @@ if word_1.isalpha():
 
         for character in list_1:
             list_1.append(character)
-        list_1.sort()h
+        list_1.sort()
         for character in list_2:
             list_2.append(character)
         list_2.sort()

@@ -29,3 +29,4 @@ for index in range(len(matriz)):
     if index % 2 != 0:
         matriz[index].reverse()
 print(matriz)
+print("\n")

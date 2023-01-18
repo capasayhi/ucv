@@ -24,7 +24,7 @@ alerts = [
     '\nI give up, self-destruction in 3,2,1... BOOM!'
 ]
 inputs = [
-    'Enter an integer of at least 4 digits: ',
+    '\nEnter an integer of at least 4 digits: ',
     'At least four digits must been enter: ',
     'Come on, it\'s not complicated, just enter 4 or more integers: ',
 
@@ -57,4 +57,4 @@ if validUserInput:
         num = int(str(squareNum)[start: end])
 
 print("\n\nA list with the generated random values is shown below\n", randomNumberList)
-print()
+print("\n")
