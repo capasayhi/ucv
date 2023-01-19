@@ -21,21 +21,33 @@ matriz = createBaseMatrix(order)
 
 # Fill the rows with the number of values as indicated by the order
 counter = 1
+controlerImpar = -1
+controlerPar = 1
 for row in range(len(matriz)):
     print("\nrow", row)
-    controler = 0
     for column in range(order):
 
-        if row == 1:
-            controler = -1
-            print("controler", controler)
-        elif row >= 2:
-            controler = (controler - 1) * -1
-        print("controler", controler)
+        if row % 2 == 0 and row > 0:
 
-        matriz[controler].append(counter)
-        counter += 1
-    # if row % 2 != 0:
-    #   matriz[row].reverse()
+            if len(matriz[controlerPar]) == order:
+                controlerPar += 1
+
+            print("row", row, "controlerPar", controlerPar, "matriz", matriz)
+
+            matriz[controlerPar].append(counter)
+            counter += 1
+
+        elif row % 2 != 0 and row > 0:
+            if len(matriz[controlerImpar]) == order:
+                controlerImpar -= 1
+            # print("row", row, "controlerImpar",
+            #       controlerImpar, "matriz", matriz)
+
+            matriz[controlerImpar].append(counter)
+            counter += 1
+
+        else:
+            matriz[row].append(counter)
+            counter += 1
 print(matriz)
 print("\n")
