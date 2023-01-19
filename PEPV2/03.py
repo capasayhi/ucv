@@ -28,26 +28,20 @@ for row in range(len(matriz)):
     for column in range(order):
 
         if row % 2 == 0 and row > 0:
-
             if len(matriz[controlerPar]) == order:
                 controlerPar += 1
-
-            print("row", row, "controlerPar", controlerPar, "matriz", matriz)
-
             matriz[controlerPar].append(counter)
             counter += 1
 
         elif row % 2 != 0 and row > 0:
             if len(matriz[controlerImpar]) == order:
                 controlerImpar -= 1
-            # print("row", row, "controlerImpar",
-            #       controlerImpar, "matriz", matriz)
-
             matriz[controlerImpar].append(counter)
             counter += 1
 
         else:
             matriz[row].append(counter)
             counter += 1
+
 print(matriz)
 print("\n")
