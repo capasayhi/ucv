@@ -1,0 +1,25 @@
+{
+  "curso": {
+    "professor": "Carlos Gonzalez",
+    "students": [
+      {
+        "first name": "Gustavo",
+        "last name": "Ramirez",
+        "age": "40",
+        "ID": "6098113"
+      },
+      {
+        "first name": "Esperanza",
+        "last name": "Garcia",
+        "age": "21",
+        "ID": "12345678"
+      },
+      {
+        "first name": "Gabriela",
+        "last name": "Morales",
+        "age": "23",
+        "ID": "87654321"
+      }
+    ]
+  }
+}
