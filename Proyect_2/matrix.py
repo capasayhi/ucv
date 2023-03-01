@@ -5,20 +5,7 @@ from modules.algebra import matrixMultiplication, inversionOfMatrix, crossProduc
 
 print('Avaliable operations for matrix are\n  \tMultiplication (m)\n \tInversion of matrices (i)\n \Cross product (c)\n \tTransposition of matrices (t)\n \tSystem resolution of linear equations (s)\n')
 
-
-A = np.array([[4, 3, 2], [-2, 2, 3], [3, -5, 2]])
-B = np.array([25, -10, -4])
-X = np.linalg.inv(A).dot(B)
-
-print(X)
-
 operation = input('What operation do you want to perform?: ')
-
-# generate 2 matrix of random values
-# A = np.random.randint(1, 10, size=(3, 3))
-# B = np.random.randint(1, 10, size=(3, 2))
-# print(f"Matrix A:\n {A}\n")
-# print(f"Matrix B:\n {B}\n")
 
 if operation == 'm':
     print('\nTo first matrix (A)')
